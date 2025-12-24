@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maruf Hassan | Academic Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --primary:#0a6ebd;
+      --secondary:#0fb9b1;
+      --dark:#1e272e;
+      --light:#f5f6fa;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--light);
+      color:#222;
+    }
+
+    /* ===== HOME HEADER ===== */
+    header.home{
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      padding:40px 20px;
+    }
+
+    .home-wrap{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .home-text{
+      flex:1 1 600px;
+      padding:20px;
+    }
+
+    .home-text h1{font-size:3rem;margin-bottom:10px}
+    .home-text h3{font-size:1.6rem;margin-bottom:10px}
+    .home-text p{line-height:1.8;margin-bottom:12px}
+
+    .home-photo{
+      flex:0 0 300px;
+      text-align:center;
+    }
+
+    .home-photo img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      border:3px solid #fff;
+      object-fit:cover;
+    }
+
+    /* ===== NAV ===== */
+    .nav{
+      background:var(--dark);
+      color:#fff;
+    }
+
+    .menu-btn{
+      font-size:2rem;
+      padding:15px;
+      cursor:pointer;
+    }
+
+    #menu{
+      display:none;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    #menu.show{display:block}
+
+    #menu li{
+      padding:15px;
+      border-bottom:1px solid rgba(255,255,255,.15);
+      cursor:pointer;
+    }
+
+    #menu li:hover{
+      background:var(--primary);
+    }
+
+    /* ===== PAGES ===== */
+    .page{
+      max-width:1200px;
+      margin:40px auto;
+      padding:0 20px;
+      display:none;
+    }
+
+    .page.active{display:block}
+
+    .list-serial{
+      list-style:decimal;
+      margin-left:25px;
+      line-height:1.9;
+      font-size:1.1rem;
+    }
+
+    /* ===== COLLEGE ===== */
+    .college-structure{
+      background:#fff;
+      border-radius:10px;
+      padding:25px;
+    }
+
+    .college-structure img{
+      max-width:180px;
+      display:block;
+      margin:0 auto 20px;
+    }
+
+    .college-photos{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:15px;
+      margin-top:20px;
+    }
+
+    .college-photos img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    /* ===== QUOTES ===== */
+    .quotes-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .quote-card{
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,.08);
+    }
+
+    .quote-card img{
+      width:100%;
+      border-radius:8px;
+      margin-bottom:10px;
+    }
+
+    /* ===== SONG ===== */
+    .song-box{
+      background:#000;
+      color:#0ff;
+      padding:30px;
+      margin:40px 0;
+      border-radius:10px;
+      text-align:center;
+    }
+
+    .song-line{
+      font-size:1.2rem;
+      display:none;
+    }
+
+    .song-line.active{display:block}
+
+    /* ===== FOOTER ===== */
+    footer{
+      text-align:center;
+      background:var(--dark);
+      color:#fff;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+      .home-wrap{flex-direction:column;text-align:center}
+      .home-photo{margin-top:20px}
+    }
+	<style>
+  :root{
+    --primary:#0a6ebd;
+    --secondary:#0fb9b1;
+    --dark:#1e272e;
+    --light:#f5f6fa;
+  }
+
+  body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light);
+    color:#222;
+  }
+
+  /* 🎧 Lines That Inspire Me */
+  .song-title{
+    font-size:1.6rem;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#00ffff,#ff00ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+  /* ===== PROFILE BOX ===== */
+.profile-box{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* profile image container */
+.profile-img img{
+  width: 110px;          /* size ছোট */
+  height: 110px;
+  border-radius: 50%;   /* circle */
+  object-fit: cover;
+  border: 4px solid #fff;/* white border */
+}
+
+/* text side */
+.profile-info h2{
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.profile-info p{
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.contact-toggle{
+  text-align:center;
+  margin-top:10px;
+}
+
+.contact-toggle button{
+  background: var(--primary);
+  color:#fff;
+  padding:8px 15px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:1rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.contact-toggle button:hover{
+  background: var(--secondary);
+}
+
+.contact-info{
+  display:none; /* hidden by default */
+  margin-top:10px;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.contact-info a{
+  text-decoration:none;
+  color:#fff;
+  background: var(--primary);
+  padding:6px 12px;
+  border-radius:25px;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  transition:0.3s;
+}
+
+.contact-info a:hover{
+  background: var(--secondary);
+}
+</style>
+  
+</style>
+
+
+</head>
+
+<body>
+
+<!-- ===== HOME ===== -->
+<header class="home" id="home">
+  <div class="home-wrap">
+
+    <!-- INTRODUCTION (SCROLL TARGET) -->
+    <div class="profile-box">
+  <div class="profile-img">
+    <img src="WhatsApp Image 2025-12-23 at 3.30.40 PM.jpeg" alt="Maruf Hassan">
+  </div>
+  <div class="profile-info">
+    <h2>Maruf Hassan</h2>
+    <p>
+      Computer Science & Engineering Student <br>
+      Curious Mind | Problem Solver | <br>
+      Always Learning & Improving <br>
+      Believer in Hard Work, Discipline & Innovation
+    </p>
+  <!-- ===== CONTACT INFO (HIDDEN) ===== -->
+<div class="contact-toggle">
+  <button onclick="toggleContact()" title="Click to view contact info">
+    <i class="fa fa-address-card"></i> Contact Me
+  </button>
+  <div class="contact-info" id="contactInfo">
+    <a href="tel:6002039974" target="_blank">
+      <i class="fa fa-phone"></i> 6002039974
+    </a>
+    <a href="https://www.instagram.com/maruf_theone/" target="_blank">
+      <i class="fab fa-instagram"></i> maruf_theone
+    </a>
+    <a href="mailto:marufhkpcse@gmail.com" target="_blank">
+      <i class="fa fa-envelope"></i> marufhkpcse@gmail.com
+    </a>
+  </div>
+</div>
+  
+</div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  
+  <ul id="menu">
+    <li onclick="showPage('home-extra')">Home</li>
+    <li onclick="scrollIntro()">My Introduction</li>
+    <li onclick="showPage('sem1')">1st Semester</li>
+    <li onclick="showPage('sem2')">2nd Semester</li>
+    <li onclick="showPage('books')">Books</li>
+    <li onclick="showPage('pyq')">PYQ</li>
+    <li onclick="showPage('syllabus')">Syllabus</li>
+    <li onclick="showPage('branches')">Branches</li>
+    <li onclick="showPage('notice')">Notice HKP</li>
+  </ul>
+</nav>
+
+<!-- ===== HOME EXTRA ===== -->
+<section class="page active" id="home-extra">
+
+
+ 
+    
+</section>
+  </div>
+</section>
+  <div class="song-box">
+  <h2 class="song-title">🎧 Lines That Inspire Me</h2>
+
+  <div class="song-line active">Tere Dil Pe Haq Mera Hai</div>
+  <div class="song-line">Tu Sanam Beshaq Mera</div>
+  <div class="song-line">Fir Lakeerein Ho Ya Na Ho</div>
+  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+
+  <div class="song-line">Jo Tu Aag Hai Haan To Fir Mujhe</div>
+  <div class="song-line">Jalne Ka Shauk Hai Jalne Ka Shauk Hai</div>
+  <div class="song-line">Marne Se Kahin Zyada Haan Tujhe</div>
+  <div class="song-line">Khone Ka Khauf Hai Khone Ka Khauf Hai</div>
+
+  <div class="song-line">Tu Chahiye Mujhe Chahe Kahe Ise</div>
+  <div class="song-line">Mera Junoon Ya Fir Tu Zid Meri</div>
+
+  <div class="song-line">Tu Hi Armaan Tu Hi Sach Hai</div>
+  <div class="song-line">Keh Rahi Deewaniyat Hai</div>
+  <div class="song-line">Main Yeh Dil Pe Likh Chuka Hoon</div>
+  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+
+  <div class="song-line">Tere Aage Zindagi Ki</div>
+  <div class="song-line">Khaakh Jitni Ahamiyat Hai</div>
+  <div class="song-line">Faisla Main Kar Chuka Hoon</div>
+  <div class="song-line">Tu Mera Main Bhi Hoon Bas Tera</div>
+
+  <div class="song-line">Paane Ki Tujhko Hasrat Liye Hi</div>
+  <div class="song-line">Raaton Ko Main Jagta Hoon</div>
+  <div class="song-line">Kyun Jane Phir Bhi Dushman Teri Do</div>
+  <div class="song-line">Aankhon Ko Main Lagta Hu</div>
+
+  <div class="song-line">Kahe Na Chahe Tu Mujhe</div>
+  <div class="song-line">Karunga Tujhe Ishq Main</div>
+  <div class="song-line">Mujhe Yeh Parwah Nahi</div>
+  <div class="song-line">Jo Bhi Ho Mera Anjaam Har Haal Mein</div>
+
+  <div class="song-line">Tu Chahiye Mujhe Jo Bhi Saza Mile</div>
+  <div class="song-line">Parwah Hai Phir Kise Anjaam Ki</div>
+
+  <div class="song-line">Tu Hi Armaan Tu Hi Sach Hai</div>
+  <div class="song-line">Keh Rahi Deewaniyat Hai</div>
+  <div class="song-line">Main Yeh Dil Pe Likh Chuka Hoon</div>
+  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+
+  <div class="song-line">Tere Aage Zindagi</div>
+  <div class="song-line">Khaakh Jitni Ahamiyat Hai</div>
+  <div class="song-line">Faisla Main Kar Chuka Hu</div>
+  <div class="song-line">Tu Mera Main Bhi Hoon Bas Tera</div>
+
+  <div class="song-line">Tere Dil Pe Haq Mera Hai</div>
+  <div class="song-line">Tu Sanam Beshaq Mera</div>
+  <div class="song-line">Fir Lakeerein Ho Ya Na Ho</div>
+  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+
+  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+</div>
+</section>
+
+<!-- ===== SEMESTERS ===== -->
+<section id="sem1" class="page">
+  <h2>1st Semester Notes (Only)</h2>
+  <ol class="list-serial">
+    <li>Physics</li>
+    <li>Mathematics</li>
+    <li>Chemistry</li>
+    <li>English</li>
+    <li>Engineering Graphics</li>
+    <li>Yoga</li>
+  </ol>
+</section>
+
+<section id="sem2" class="page">
+  <h2>2nd Semester Notes (Only)</h2>
+  <ol class="list-serial">
+    <li>Physics</li>
+    <li>Mathematics</li>
+    <li>FEEE</li>
+    <li>Engineering Mechanics</li>
+    <li>EVS</li>
+    <li>IT System</li>
+  </ol>
+</section>
+
+<!-- ===== OTHER PAGES ===== -->
+<section id="books" class="page"><h2>Books Section</h2></section>
+<section id="pyq" class="page"><h2>PYQ Section</h2></section>
+<section id="syllabus" class="page"><h2>Syllabus Section</h2></section>
+<section id="branches" class="page"><h2>Branches: CSE | Civil | Electrical</h2></section>
+<section id="notice" class="page"><h2>Notice Board – HKP</h2></section>
+
+<footer>
+  Developed by Maruf Hassan © 2025
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('menu').classList.toggle('show');
+}
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('menu').classList.remove('show');
+}
+
+function scrollIntro(){
+  window.location.href = "https://marufhassan123.github.io/marufhassan-site/";
+}
+
+let idx=0;
+const lines=document.querySelectorAll('.song-line');
+setInterval(()=>{
+  lines.forEach(l=>l.classList.remove('active'));
+  lines[idx].classList.add('active');
+  idx=(idx+1)%lines.length;
+},3500);
+
+/* ===== CONTACT TOGGLE FUNCTION ===== */
+function toggleContact(){
+  const info = document.getElementById('contactInfo');
+  if(info.style.display === 'flex'){
+    info.style.display = 'none';
+  }else{
+    info.style.display = 'flex';
+  }
+}
+</script>
+</body>
+</html>
