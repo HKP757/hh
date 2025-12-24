@@ -281,7 +281,106 @@
 .contact-info a:hover{
   background: var(--secondary);
 }
-</style>
+.photo-box{
+  text-align:center;
+  border: 3px solid #0a6ebd; /* blue border */
+  padding:10px;
+  border-radius:12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background:#fff;
+}
+
+.photo-box img{
+  width:120px;  /* small size */
+  height:145px;
+  border-radius:10px5
+  object-fit:cover;
+  border:2px solid #0fb9b1;
+  margin-bottom:8px;
+}
+
+.photo-quote{
+  font-size:0.85rem;
+  color:#333;
+  line-height:1.4;
+  max-width:150px; /* photo width */
+  margin:auto;
+}
+  .achievements{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.photo-box{
+  text-align:center;
+  border: 3px solid #0a6ebd; /* blue border */
+  padding:10px;
+  border-radius:12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background:#fff;
+  width:180px; 
+}
+
+.photo-box img{
+  width:120px;  
+  height:120px;
+  border-radius:10px;
+  object-fit:cover;
+  border:2px solid #0fb9b1;
+  margin-bottom:8px;
+}
+
+.photo-quote{
+  font-size:0.85rem;
+  color:#333;
+  line-height:1.4;
+  max-width:160px; 
+  margin:auto;
+}
+.achievements{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.photo-box{
+  text-align:center;
+  border:3px solid #0a6ebd;
+  padding:15px;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  width:190px;
+}
+
+.pdf-placeholder{
+  width:120px;
+  height:120px;
+  background:#0fb9b1;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.3rem;
+  font-weight:bold;
+  border-radius:10px;
+  margin:0 auto 8px;
+}
+
+.photo-box a{
+  text-decoration:none;
+}
+
+.photo-quote{
+  font-size:0.85rem;
+  color:#333;
+  line-height:1.4;
+}
   
 </style>
 
@@ -335,6 +434,7 @@
   <ul id="menu">
     <li onclick="showPage('home-extra')">Home</li>
     <li onclick="scrollIntro()">My Introduction</li>
+	<li onclick="showPortfolio()">My Portfolio</li>
     <li onclick="showPage('sem1')">1st Semester</li>
     <li onclick="showPage('sem2')">2nd Semester</li>
     <li onclick="showPage('books')">Books</li>
@@ -348,9 +448,6 @@
 <!-- ===== HOME EXTRA ===== -->
 <section class="page active" id="home-extra">
 
-
- 
-    
 </section>
   </div>
 </section>
@@ -466,8 +563,143 @@
     </ol>
   </div>
 </section>
-<section id="branches" class="page"><h2>Branches: CSE | Civil | Electrical</h2></section>
-<section id="notice" class="page"><h2>Notice Board – HKP</h2></section>
+<section id="branches" class="page">
+  <h2>Branches: CSE | Civil | Electrical</h2>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio" class="page">
+  <h2>My Portfolio</h2>
+
+  <!-- Portfolio Options -->
+  <div style="display:flex; gap:20px; margin-bottom:20px;">
+    <button onclick="showPortfolioContent('gallery')">Gallery</button>
+  </div>
+
+  <!-- Gallery -->
+  <div id="gallery" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:20px;">
+    
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-24 at 7.58.41 PM.jpeg" alt="Gallery 1">
+      <p class="photo-quote">Capturing memorable moments and creativity, this image represents passion and energy in action.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-23 at 10.59.46 PM.jpeg" alt="Gallery 2">
+      <p class="photo-quote">A snapshot showcasing dedication and hard work, inspiring motivation and learning in daily life.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-24 at 8.01.37 PM.jpeg" alt="Gallery 3">
+      <p class="photo-quote">Moments captured to remember success, growth, and learning experiences from my academic journey.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-24 at 7.58.44 PM.jpeg" alt="Gallery 4">
+      <p class="photo-quote">An image that reflects creativity, problem solving, and enthusiasm in computer science projects.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-24 at 7.58.42 PM.jpeg" alt="Gallery 5">
+      <p class="photo-quote">Capturing hard work and dedication in studies and personal growth for future opportunities.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-23 at 10.27.10 PM.jpeg" alt="Gallery 6">
+      <p class="photo-quote">Memories from academic life, emphasizing learning, discipline, and striving for excellence every day.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-23 at 10.27.56 PM.jpeg" alt="Gallery 7">
+      <p class="photo-quote">Inspiration captured in a photo, representing achievements, motivation, and determination to succeed.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-24 at 7.58.40 PM.jpeg" alt="Gallery 8">
+      <p class="photo-quote">A picture representing continuous learning, curiosity, and enthusiasm for new challenges ahead.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-23 at 10.25.28 PM.jpeg" alt="Gallery 9">
+      <p class="photo-quote">Captured moment reflecting teamwork, creativity, and dedication to achieve academic and personal goals.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-23 at 10.24.11 PM.jpeg" alt="Gallery 10">
+      <p class="photo-quote">Snapshot of inspiration and hard work, showing consistent efforts and learning new skills.</p>
+    </div>
+
+    <div class="photo-box">
+      <img src="WhatsApp Image 2025-12-24 at 7.58.43 PM.jpeg" alt="Gallery 11">
+      <p class="photo-quote">Final gallery image highlighting creativity, innovation, and the journey of growth and success.</p>
+    </div>
+	<div class="photo-box">
+  <img src="WhatsApp Image 2025-12-24 at 7.58.41 PM.jpeg" alt="Photo">
+  <div class="photo-quote">"Life is about making memories and cherishing them."</div>
+</div>
+
+  </div>
+
+ 
+  <!-- ACHIEVEMENTS GALLERY -->
+  <div style="display:flex; gap:20px; margin-bottom:20px;">
+    <button onclick="showPortfolioContent('gallery')">achievement</button>
+  </div>
+
+<div class="achievements">
+
+  <div class="photo-box">
+    <a href="National Sports &  physical Fitness Board.pdf" target="_blank">
+      <div class="pdf-placeholder">PDF</div>
+    </a>
+    <div class="photo-quote">
+      Achieved excellence in sports and fitness, demonstrating discipline, dedication, consistency, and strong physical performance.
+    </div>
+  </div>
+
+  <div class="photo-box">
+    <a href="Getting Started with Working Remotely Certificat.pdf" target="_blank">
+      <div class="pdf-placeholder">PDF</div>
+    </a>
+    <div class="photo-quote">
+      Learned essential remote working skills, improving communication, productivity, collaboration, and adaptability in digital workplaces.
+    </div>
+  </div>
+
+  <div class="photo-box">
+    <a href="Time  maagement certificat.pdf" target="_blank">
+      <div class="pdf-placeholder">PDF</div>
+    </a>
+    <div class="photo-quote">
+      Developed effective time management skills, prioritizing tasks efficiently, meeting deadlines, and maintaining consistent productivity.
+    </div>
+  </div>
+
+  <div class="photo-box">
+    <a href="introduction R certificate.pdf" target="_blank">
+      <div class="pdf-placeholder">PDF</div>
+    </a>
+    <div class="photo-quote">
+      Completed introduction to R programming, gaining foundational knowledge in data analysis and statistical computing.
+    </div>
+  </div>
+
+  <div class="photo-box">
+    <a href="mini challeng garbage moving robot certificate.pdf" target="_blank">
+      <div class="pdf-placeholder">PDF</div>
+    </a>
+    <div class="photo-quote">
+      Designed and built a garbage moving robot, showcasing innovation, engineering skills, and problem-solving ability.
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
+<section id="notice" class="page">
+  <h2>Notice Board – HKP</h2>
+</section>
 
 <footer>
   Developed by Maruf Hassan © 2025
@@ -506,8 +738,19 @@ function toggleContact(){
     info.style.display = 'flex';
   }
 }
+/* ===== PORTFOLIO FUNCTIONS ===== */
+function showPortfolio(){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('portfolio').classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+  document.getElementById('menu').classList.remove('show');
+}
+
+function showPortfolioContent(id){
+  document.getElementById('gallery').style.display = 'none';
+  document.getElementById('achievements').style.display = 'none';
+  document.getElementById(id).style.display = 'grid';
+}
 </script>
 </body>
 </html>
-
-
