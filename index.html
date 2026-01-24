@@ -27,11 +27,29 @@
     }
 
     /* ===== HOME HEADER ===== */
-    header.home{
-      background:linear-gradient(135deg,var(--primary),var(--secondary));
-      color:#fff;
-      padding:40px 20px;
-    }
+    /* ===== UNIQUE TECH HEADER ===== */
+header.home{
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color:#fff;
+  padding:60px 20px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* glowing animation */
+header.home::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at top left, rgba(0,255,255,0.15), transparent 60%),
+              radial-gradient(circle at bottom right, rgba(255,0,255,0.15), transparent 60%);
+  animation: glowMove 6s infinite alternate;
+}
+
+@keyframes glowMove{
+  from{opacity:0.6}
+  to{opacity:1}
+}
 
     .home-wrap{
       max-width:1200px;
@@ -215,9 +233,15 @@
   }
   /* ===== PROFILE BOX ===== */
 .profile-box{
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  background: rgba(255,255,255,0.1);
+  padding:22px 26px;
+  border-radius:22px;
+  backdrop-filter: blur(12px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+  z-index:1;
 }
 
 /* profile image container */
@@ -231,8 +255,11 @@
 
 /* text side */
 .profile-info h2{
-  margin: 0;
-  font-size: 1.3rem;
+  font-size:1.7rem;
+  font-weight:700;
+  background: linear-gradient(90deg,#00ffff,#ff00ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .profile-info p{
@@ -539,7 +566,7 @@
     <!-- INTRODUCTION (SCROLL TARGET) -->
     <div class="profile-box">
   <div class="profile-img">
-    <img src="WhatsApp Image 2025-12-23 at 3.30.40 PM.jpeg" alt="Maruf Hassan">
+    <img src="km.jpeg" alt="Maruf Hassan">
   </div>
   <div class="profile-info">
     <h2>Maruf Hassan</h2>
@@ -1374,6 +1401,42 @@
   <img src="WhatsApp Image 2025-12-25 at 12.36.36 AM.jpeg" alt="Photo">
   <div class="photo-quote">"Life is about making memories and cherishing them."</div>
 </div>
+<div class="photo-box">
+  <img src="io.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="ll.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="kl.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="tr.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="hg.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="uu.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="mm.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="yy.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="tt.jpeg" alt="Photo">
+</div>
+<div class="photo-box">
+  <img src="my.jpeg" alt="Photo">
+</div
+<div class="photo-box">
+  <img src="nb.jpeg" alt="Photo">
+</div
+<div class="photo-box">
+  <img src="yt.jpeg" alt="Photo">
+</div
   </div>
 
  
