@@ -2,12 +2,15 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maruf Hassan | Academic Platform</title>
+  <meta name="description" content="Maruf Hassan is a Full Stack Web Developer and Computer Science & Engineering enthusiast from Karimganj, Assam, India. Passionate about web development, programming, software engineering, Python, MongoDB, Internet of Things (IoT), Data Science, Cloud Computing, and Software Testing. This platform provides programming notes, coding tutorials, academic resources, books, syllabi, previous year question papers, and practical projects to help learners and developers enhance their technical skills through continuous learning and innovation.">
 	<meta name="google-site-verification" content="xtJnDJiWT1FSkAO7M_rPpIwcoM7I2lK_oYhNQBsi5Eg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -552,6 +555,807 @@ header.home::before{
   color:#fff;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================================================
+   MODERN UI PACK (Add this at the END of your current CSS)
+   =========================================================== */
+
+/* Smooth Scroll + Reset */
+html{
+  scroll-behavior:smooth;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+::selection{
+  background:#00d9ff;
+  color:#fff;
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#edf5ff;
+}
+
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#00c6ff,#0072ff);
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,#ff00cc,#3333ff);
+}
+
+/* Animated Background */
+body{
+  background:linear-gradient(-45deg,#eef6ff,#ffffff,#f5ffff,#eef6ff);
+  background-size:400% 400%;
+  animation:bgMove 18s ease infinite;
+}
+
+@keyframes bgMove{
+  0%{
+    background-position:0% 50%;
+  }
+  50%{
+    background-position:100% 50%;
+  }
+  100%{
+    background-position:0% 50%;
+  }
+}
+
+/* Glass Effect */
+.glass{
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:18px;
+}
+
+/* Floating Animation */
+@keyframes floating{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-8px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+.profile-box{
+  animation:floating 5s ease-in-out infinite;
+}
+
+/* Fade Animation */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.page{
+  animation:fadeUp .8s ease;
+}
+
+/* Gradient Headings */
+h1,h2,h3{
+  background:linear-gradient(90deg,#00d2ff,#3a7bd5);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Modern Buttons */
+button{
+  transition:.35s;
+}
+
+button:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px rgba(0,0,0,.25);
+}
+
+/* Modern PDF Card Shine */
+.pdf-box{
+  overflow:hidden;
+  position:relative;
+}
+
+.pdf-box::before{
+  content:"";
+  position:absolute;
+  width:180%;
+  height:180%;
+  left:-170%;
+  top:-45%;
+  background:linear-gradient(120deg,
+  transparent,
+  rgba(255,255,255,.35),
+  transparent);
+  transform:rotate(25deg);
+  transition:.8s;
+}
+
+.pdf-box:hover::before{
+  left:120%;
+}
+
+/* Navigation Hover Line */
+#menu li{
+  position:relative;
+  transition:.3s;
+}
+
+#menu li::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:3px;
+  background:#00ffff;
+  transition:.4s;
+}
+
+#menu li:hover::after{
+  width:100%;
+}
+
+/* Image Hover */
+img{
+  transition:.45s;
+}
+
+img:hover{
+  transform:scale(1.05);
+}
+
+/* Premium Shadow */
+.profile-box,
+.pdf-box,
+.photo-box,
+.quote-card{
+  box-shadow:0 12px 35px rgba(0,0,0,.14);
+}
+
+/* Hover Glow */
+.profile-box:hover,
+.pdf-box:hover,
+.photo-box:hover,
+.quote-card:hover{
+  box-shadow:0 0 30px rgba(0,212,255,.45);
+}
+
+/* Section Title */
+.section-title{
+  text-align:center;
+  font-size:2rem;
+  margin:45px 0;
+  letter-spacing:1px;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  width:100px;
+  height:4px;
+  background:#00bfff;
+  margin:12px auto;
+  display:block;
+  border-radius:50px;
+}
+
+/* Modern Cards */
+.card{
+  background:#fff;
+  border-radius:18px;
+  padding:22px;
+  transition:.35s;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+/* Smooth Links */
+a{
+  transition:.3s;
+}
+
+a:hover{
+  opacity:.9;
+}
+
+/* Profile Image Ring */
+.profile-img img{
+  transition:.4s;
+}
+
+.profile-img img:hover{
+  transform:scale(1.08) rotate(2deg);
+  box-shadow:0 0 25px cyan;
+}
+
+/* Modern Input */
+input,
+textarea{
+  transition:.35s;
+}
+
+input:focus,
+textarea:focus{
+  border-color:#00bfff;
+  box-shadow:0 0 15px rgba(0,191,255,.4);
+  outline:none;
+}
+
+/* Achievement Card */
+.achievement-card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px;
+  text-align:center;
+  transition:.35s;
+  box-shadow:0 8px 22px rgba(0,0,0,.1);
+}
+
+.achievement-card:hover{
+  transform:translateY(-8px);
+  background:linear-gradient(135deg,#0a6ebd,#0fb9b1);
+  color:#fff;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.profile-box{
+flex-direction:column;
+text-align:center;
+}
+
+.pdf-grid{
+grid-template-columns:1fr;
+}
+
+.photo-box{
+width:100%;
+}
+
+.showcase-buttons{
+flex-direction:column;
+}
+
+.social-icons{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+/* ===== PREMIUM PORTFOLIO HEADER ===== */
+
+header.home{
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  background:
+  radial-gradient(circle at top left,#00e5ff33,transparent 40%),
+  radial-gradient(circle at bottom right,#ff00cc33,transparent 40%),
+  linear-gradient(135deg,#020024,#090979,#00d4ff);
+}
+
+
+/* Profile Card Modern */
+.profile-box{
+  max-width:650px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  backdrop-filter:blur(20px);
+  border-radius:30px;
+  padding:35px;
+  box-shadow:
+  0 25px 50px rgba(0,0,0,.35);
+  animation:floating 5s infinite;
+}
+
+
+/* Profile Image */
+.profile-img img{
+
+ width:130px;
+ height:130px;
+
+ border:5px solid transparent;
+
+ background:
+ linear-gradient(#fff,#fff) padding-box,
+ linear-gradient(45deg,#00ffff,#ff00ff) border-box;
+
+}
+
+
+/* Name Style */
+.profile-info h2{
+
+font-size:2.2rem;
+
+background:
+linear-gradient(90deg,#00ffff,#ffffff,#ff00ff);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+
+/* Description */
+.profile-info p{
+
+color:#f1f1f1;
+font-size:1rem;
+line-height:1.7;
+
+}
+
+
+/* Contact Button */
+
+.contact-toggle button{
+
+background:
+linear-gradient(135deg,#00c6ff,#0072ff);
+
+padding:12px 25px;
+
+border-radius:50px;
+
+font-weight:bold;
+
+}
+
+
+/* About Section */
+
+#home-extra{
+
+background:white;
+
+border-radius:25px;
+
+padding:40px;
+
+margin-top:40px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.12);
+
+}
+
+
+#home-extra h2{
+
+font-size:2.2rem;
+
+text-align:center;
+
+}
+
+
+#home-extra p{
+
+font-size:1.05rem;
+
+line-height:1.9;
+
+color:#555;
+
+}
+
+
+/* Section Animation */
+
+section{
+
+animation:fadeUp .8s ease;
+
+}
+
+
+/* Mobile Design */
+
+@media(max-width:768px){
+
+header.home{
+
+min-height:auto;
+padding:40px 15px;
+
+}
+
+.profile-box{
+
+padding:25px;
+
+}
+
+.profile-info h2{
+
+font-size:1.7rem;
+
+}
+
+}
+
+
+
+
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Outfit',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    background:linear-gradient(
+    -45deg,
+    #eef2ff,
+    #dbeafe,
+    #ecfeff,
+    #fef9c3,
+    #fce7f3,
+    #ede9fe,
+    #dcfce7);
+    background-size:600% 600%;
+    animation:aurora 20s ease infinite;
+}
+
+/* Aurora Animation */
+
+@keyframes aurora{
+
+0%{
+background-position:0% 50%;
+}
+
+25%{
+background-position:100% 50%;
+}
+
+50%{
+background-position:100% 100%;
+}
+
+75%{
+background-position:0% 100%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Floating Blur Lights */
+
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#60a5fa55;
+filter:blur(140px);
+border-radius:50%;
+top:-120px;
+left:-120px;
+animation:float1 14s infinite alternate;
+z-index:-2;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:450px;
+height:450px;
+background:#c084fc55;
+filter:blur(150px);
+border-radius:50%;
+bottom:-120px;
+right:-120px;
+animation:float2 18s infinite alternate;
+z-index:-2;
+}
+
+@keyframes float1{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(250px,180px);
+}
+}
+
+@keyframes float2{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(-220px,-160px);
+}
+}
+
+/* Premium Glass */
+
+section,
+.container,
+.card{
+
+background:rgba(255,255,255,.60);
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,.35);
+
+border-radius:28px;
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.12),
+
+inset 0 1px 1px rgba(255,255,255,.5);
+
+transition:.5s;
+
+}
+
+/* Hover */
+
+section:hover,
+.card:hover{
+
+transform:translateY(-10px) scale(1.02);
+
+box-shadow:
+
+0 30px 70px rgba(59,130,246,.20);
+
+}
+
+/* Gradient Heading */
+
+h1,h2,h3{
+
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#06b6d4,
+#8b5cf6,
+#ec4899,
+#22c55e,
+#f59e0b);
+
+background-size:500%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:textFlow 7s linear infinite;
+
+}
+
+@keyframes textFlow{
+
+100%{
+
+background-position:500%;
+
+}
+
+}
+
+/* Paragraph */
+
+p,li{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#334155;
+
+}
+
+/* Premium Button */
+
+button,
+.btn{
+
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+color:white;
+
+padding:14px 34px;
+
+border:none;
+
+border-radius:60px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:0 12px 25px rgba(59,130,246,.25);
+
+}
+
+button:hover,
+.btn:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+box-shadow:0 20px 40px rgba(124,58,237,.35);
+
+}
+
+/* Image */
+
+img{
+
+border-radius:25px;
+
+transition:.5s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+img:hover{
+
+transform:scale(1.04);
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(#3b82f6,#8b5cf6,#ec4899);
+
+border-radius:20px;
+
+}
+
+
+/* ===== MENU FIX ===== */
+
+.nav{
+    background:rgba(10,15,25,.95) !important;
+    backdrop-filter:blur(18px);
+}
+
+#menu{
+    background:rgba(15,23,42,.98);
+}
+
+#menu li{
+    color:#ffffff !important;
+    font-size:18px;
+    font-weight:600;
+    padding:18px 22px;
+    transition:.3s;
+}
+
+#menu li:hover{
+    color:#ffffff !important;
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+}
+
+.menu-btn{
+    color:#ffffff !important;
+    font-size:34px;
+}
+
+.menu-btn i{
+    color:#ffffff !important;
+}
+
+#menu li a{
+    color:#ffffff !important;
+    text-decoration:none;
+    display:block;
+}
+
+#menu li.active{
+    background:linear-gradient(135deg,#2563eb,#8b5cf6);
+    color:#ffffff !important;
+}
+
+
+/* ===== Single Page ===== */
+
+.page{
+    display: none;
+    animation: fadeUp .5s ease;
+}
+
+.page.active{
+    display: block;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+
+
+
+
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+
 </style>
 
 
@@ -566,7 +1370,7 @@ header.home::before{
     <!-- INTRODUCTION (SCROLL TARGET) -->
     <div class="profile-box">
   <div class="profile-img">
-    <img src="km.jpeg" alt="Maruf Hassan">
+    <img src="mr.jpeg" alt="Maruf Hassan">
   </div>
   <div class="profile-info">
     <h2>Maruf Hassan</h2>
@@ -611,13 +1415,90 @@ header.home::before{
 <li onclick="showPage('notes')">Notes</li>
 <li onclick="showPage('pyq')">PYQ</li>
     <li onclick="showPage('syllabus')">Syllabus</li>
-    <li onclick="showPage('branches')">Branches</li>
     <li onclick="showPage('notice')">Notice HKP</li>
   </ul>
 </nav>
 
 <!-- ===== HOME EXTRA ===== -->
 <section class="page active" id="home-extra">
+
+  <h2>Who is Maruf Hassan?</h2>
+
+  <p>
+    Maruf Hassan is a Full Stack Web Developer and Computer Science & Engineering enthusiast from Karimganj, Assam, India. Passionate about building modern websites, developing innovative digital solutions, and continuously exploring emerging technologies. His interests include HTML, CSS, JavaScript, Python, MongoDB, Internet of Things (IoT), Data Science, Cloud Computing, and Software Testing. Through this platform, he shares programming knowledge, coding tutorials, technical insights, practical projects, and educational content to inspire learners, developers, and technology enthusiasts to grow their skills and embrace continuous learning.
+  </p>
+
+<!-- ===== SKILLS & TECHNOLOGIES ===== -->
+
+<h2>💻 Skills & Technologies</h2>
+
+<p>
+I am passionate about software development and continuously improving my technical knowledge through practical learning and real-world projects. My current skills and areas of knowledge include:
+</p>
+
+<ul>
+  <li>Full Stack Web Development</li>
+  <li>HTML5, CSS3 & JavaScript</li>
+  <li>Python Programming</li>
+  <li>MongoDB Database</li>
+  <li>Internet of Things (IoT)</li>
+  <li>Introduction to Data Science</li>
+  <li>Introduction to Cloud Computing</li>
+  <li>Software Testing</li>
+  <li>Responsive Web Design</li>
+  <li>Git & GitHub</li>
+</ul>
+
+<!-- ===== FUTURE CAREER GOALS ===== -->
+
+<h2>Future Career Goals</h2>
+
+<p>
+My long-term vision is to become a highly skilled Software Engineer and Full Stack Web Developer who builds innovative, scalable, and user-friendly digital solutions. I aspire to develop impactful web and mobile applications, explore Artificial Intelligence and Machine Learning, contribute to meaningful technology projects, and continuously expand my technical expertise. I also hope to inspire aspiring developers by sharing knowledge, promoting innovation, and creating technology that makes a positive difference.
+</p>
+
+<!-- ===== INTERESTS & HOBBIES ===== -->
+
+<h2> Interests & Hobbies</h2>
+
+<p>
+I believe curiosity and continuous learning are the foundations of success. My interests and hobbies include:
+</p>
+
+<ul>
+  <li>Building modern websites and web applications</li>
+  <li>Learning new programming languages and emerging technologies</li>
+  <li>Exploring Artificial Intelligence and Machine Learning</li>
+  <li>Practicing coding and problem-solving</li>
+  <li>Reading about software engineering, cybersecurity, and innovation</li>
+  <li>Creating educational and technical content</li>
+  <li>Working on personal development projects</li>
+  <li>Sharing programming knowledge with learners and technology enthusiasts</li>
+</ul>
+
+<!-- ===== PROJECTS & EXPERIENCE ===== -->
+
+<h2> Projects & Experience</h2>
+
+<p>
+I enjoy applying my knowledge through practical projects that strengthen my technical and problem-solving skills. Some of my work and experience include:
+</p>
+
+<ul>
+  <li><strong>Personal Academic Platform</strong> – Designed and developed a responsive educational website featuring programming resources and learning materials.</li>
+
+  <li><strong>Personal Portfolio Website</strong> – Built a professional portfolio website to showcase my skills, achievements, projects, and technical journey.</li>
+
+  <li><strong>Responsive Web Development</strong> – Developed multiple responsive web pages using HTML, CSS, and JavaScript while following modern design principles.</li>
+
+  <li><strong>Programming Practice</strong> – Continuously improving programming skills through Python programming and practical coding exercises.</li>
+
+  <li><strong>Database Learning</strong> – Learning and practicing MongoDB for modern database management and application development.</li>
+
+  <li><strong>Technology Exploration</strong> – Expanding knowledge in Internet of Things (IoT), Data Science, Cloud Computing, and Software Testing.</li>
+
+  <li><strong>Continuous Learning</strong> – Dedicated to improving technical skills by building projects, exploring new technologies, and gaining practical experience every day.</li>
+</ul>
 
 </section>
 <!-- ===== NOTES PAGE ===== -->
@@ -753,62 +1634,89 @@ header.home::before{
 </section>
   </div>
 </section>
-  <div class="song-box">
-  <h2 class="song-title">🎧 Lines That Inspire Me</h2>
+  <!-- ===== ACHIEVEMENTS & CERTIFICATIONS ===== -->
 
-  <div class="song-line active">Tere Dil Pe Haq Mera Hai</div>
-  <div class="song-line">Tu Sanam Beshaq Mera</div>
-  <div class="song-line">Fir Lakeerein Ho Ya Na Ho</div>
-  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+<section style="margin:60px auto;max-width:1200px;padding:20px;">
 
-  <div class="song-line">Jo Tu Aag Hai Haan To Fir Mujhe</div>
-  <div class="song-line">Jalne Ka Shauk Hai Jalne Ka Shauk Hai</div>
-  <div class="song-line">Marne Se Kahin Zyada Haan Tujhe</div>
-  <div class="song-line">Khone Ka Khauf Hai Khone Ka Khauf Hai</div>
+<h2 style="text-align:center;font-size:2rem;color:#0a6ebd;">
+ Achievements & Certifications
+</h2>
 
-  <div class="song-line">Tu Chahiye Mujhe Chahe Kahe Ise</div>
-  <div class="song-line">Mera Junoon Ya Fir Tu Zid Meri</div>
+<p style="text-align:center;max-width:800px;margin:15px auto 35px;line-height:1.7;color:#555;">
+A collection of certifications, technical training programs, workshops, and skill development achievements that reflect my continuous learning journey in technology, programming, cloud computing, data science, software development, and professional growth.
+</p>
 
-  <div class="song-line">Tu Hi Armaan Tu Hi Sach Hai</div>
-  <div class="song-line">Keh Rahi Deewaniyat Hai</div>
-  <div class="song-line">Main Yeh Dil Pe Likh Chuka Hoon</div>
-  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+<div class="pdf-grid">
 
-  <div class="song-line">Tere Aage Zindagi Ki</div>
-  <div class="song-line">Khaakh Jitni Ahamiyat Hai</div>
-  <div class="song-line">Faisla Main Kar Chuka Hoon</div>
-  <div class="song-line">Tu Mera Main Bhi Hoon Bas Tera</div>
+<a href="Python programming.pdf" target="_blank" class="pdf-box">
+<i class="fa-brands fa-python"></i>
+<h3>Python Programming</h3>
+<p>Programming & Problem Solving</p>
+</a>
 
-  <div class="song-line">Paane Ki Tujhko Hasrat Liye Hi</div>
-  <div class="song-line">Raaton Ko Main Jagta Hoon</div>
-  <div class="song-line">Kyun Jane Phir Bhi Dushman Teri Do</div>
-  <div class="song-line">Aankhon Ko Main Lagta Hu</div>
+<a href="Developing with MongoDB.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-database"></i>
+<h3>Developing with MongoDB</h3>
+<p>Database Development</p>
+</a>
 
-  <div class="song-line">Kahe Na Chahe Tu Mujhe</div>
-  <div class="song-line">Karunga Tujhe Ishq Main</div>
-  <div class="song-line">Mujhe Yeh Parwah Nahi</div>
-  <div class="song-line">Jo Bhi Ho Mera Anjaam Har Haal Mein</div>
+<a href="internet of things 101.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-microchip"></i>
+<h3>Internet of Things (IoT 101)</h3>
+<p>Emerging Technology</p>
+</a>
 
-  <div class="song-line">Tu Chahiye Mujhe Jo Bhi Saza Mile</div>
-  <div class="song-line">Parwah Hai Phir Kise Anjaam Ki</div>
+<a href="introduction to data science.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Introduction to Data Science</h3>
+<p>Data Analytics Fundamentals</p>
+</a>
 
-  <div class="song-line">Tu Hi Armaan Tu Hi Sach Hai</div>
-  <div class="song-line">Keh Rahi Deewaniyat Hai</div>
-  <div class="song-line">Main Yeh Dil Pe Likh Chuka Hoon</div>
-  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+<a href="introduction to cloud computing.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-cloud"></i>
+<h3>Introduction to Cloud Computing</h3>
+<p>Cloud Technology Fundamentals</p>
+</a>
 
-  <div class="song-line">Tere Aage Zindagi</div>
-  <div class="song-line">Khaakh Jitni Ahamiyat Hai</div>
-  <div class="song-line">Faisla Main Kar Chuka Hu</div>
-  <div class="song-line">Tu Mera Main Bhi Hoon Bas Tera</div>
+<a href="warehouse testing.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-vial-circle-check"></i>
+<h3>Software Testing</h3>
+<p>Testing Fundamentals</p>
+</a>
 
-  <div class="song-line">Tere Dil Pe Haq Mera Hai</div>
-  <div class="song-line">Tu Sanam Beshaq Mera</div>
-  <div class="song-line">Fir Lakeerein Ho Ya Na Ho</div>
-  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+<a href="mini challeng garbage moving robot certificate.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-robot"></i>
+<h3>Mini Challenge Robot Project</h3>
+<p>Innovation & Robotics</p>
+</a>
 
-  <div class="song-line">Tu Mera Hai Tu Mera Hai</div>
+<a href="Getting Started with Working Remotely Certificat.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-laptop-house"></i>
+<h3>Working Remotely</h3>
+<p>Remote Work Essentials</p>
+</a>
+
+<a href="Time maagement certificat.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-clock"></i>
+<h3>Time Management</h3>
+<p>Professional Development</p>
+</a>
+
+<a href="National Sports & physical Fitness Board.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-medal"></i>
+<h3>National Sports & Physical Fitness</h3>
+<p>Sports & Physical Fitness</p>
+</a>
+
+<a href="introduction R certificate.pdf" target="_blank" class="pdf-box">
+<i class="fa-solid fa-certificate"></i>
+<h3>Professional Certification</h3>
+<p>Skill Development Achievement</p>
+</a>
+
 </div>
+
+</section>
 
 <!-- ===== ACADEMIC RESOURCE INTRO ===== -->
 <div style="text-align:center;margin-top:50px;">
@@ -966,13 +1874,13 @@ header.home::before{
 
   <div class="social-icons">
     <!-- Facebook -->
-    <a href="https://www.facebook.com/share/17j9Ew8X4T/" target="_blank" class="social fb">
+    <a href="https://www.facebook.com/share/18oLGp11mM/" target="_blank" class="social fb">
       <i class="fab fa-facebook-f"></i>
      
     </a>
 
     <!-- Instagram -->
-    <a href="https://www.instagram.com/hailakandi_polytechnic___/" target="_blank" class="social ig">
+    <a href="https://www.instagram.com/hkp_official_ig?igsh=MWptcWU3aGY2anEwYg==" target="_blank" class="social ig">
       <i class="fab fa-instagram"></i>
       
     </a>
@@ -980,7 +1888,7 @@ header.home::before{
 </div>
 </section>
 <!-- ===== DIGITAL GALLERY SHOWCASE ===== -->
-<section class="page active" id="home-showcase">
+<section class="page" id="home-showcase">
 
   <h2 class="showcase-title">Campus & Connections</h2>
 
@@ -1034,7 +1942,7 @@ header.home::before{
 
 </section>
 <!-- ===== SEMESTERS ===== -->
-<section id="sem1" class="page">
+<section class="page" id="sem1">
   <h2>Notes (Only)</h2>
   <ol class="list-serial">
 
@@ -1078,7 +1986,7 @@ header.home::before{
 </section>
 </section>
 
-<section id="sem2" class="page">
+<section class="page" id="sem2">
   <h2>Notes(Only)</h2>
   <ol class="list-serial">
 
@@ -1110,7 +2018,7 @@ header.home::before{
   </ol>
 </section>
 <!-- ===== OTHER PAGES ===== -->
-<section id="books" class="page">
+<section class="page" id="books">
 
   <h2 style="text-align:center;">📚 1st Semester Books</h2>
 
@@ -1161,7 +2069,7 @@ header.home::before{
   </div>
 
 </section>
-<section id="pyq" class="page">
+<section class="page" id="pyq">
 
   <h2 style="text-align:center;">📄 Previous Year Questions (PYQ)</h2>
 
@@ -1288,7 +2196,7 @@ header.home::before{
   </div>
 
 </section>
-<section id="syllabus" class="page">
+<section class="page" id="syllabus">
   <h2>📘 Syllabus</h2>
 
   <div class="college-structure">
@@ -1305,76 +2213,56 @@ header.home::before{
           📄 2nd Semester Syllabus
         </a>
       </li>
+	  
+	  
+	 
+  <h2 style="text-align:center;">📚 3rd Semester Syllabus</h2>
+
+  <div class="pdf-grid">
+
+    <!-- Civil -->
+    <a href="Civil.pdf" target="_blank" class="pdf-box">
+      <i class="fa-solid fa-file-pdf"></i>
+      <h3>Civil Engineering</h3>
+      <p>3rd Semester Syllabus</p>
+    </a>
+
+    <!-- CSE -->
+    <a href="Cse.pdf" target="_blank" class="pdf-box">
+      <i class="fa-solid fa-file-pdf"></i>
+      <h3>Computer Science & Engineering</h3>
+      <p>3rd Semester Syllabus</p>
+    </a>
+
+    <!-- Electrical -->
+    <a href="El.pdf" target="_blank" class="pdf-box">
+      <i class="fa-solid fa-file-pdf"></i>
+      <h3>Electrical Engineering</h3>
+      <p>3rd Semester Syllabus</p>
+    </a>
+	  
+	  
+	  
+	  <h2 style="text-align:center;">📚 4th Semester Syllabus</h2>
+
+  <div class="pdf-grid">
+
+    <!-- CSE -->
+    <a href="Computer4.pdf" target="_blank" class="pdf-box">
+      <i class="fa-solid fa-file-pdf"></i>
+      <h3>Computer Engineering</h3>
+      <p>4th Semester Syllabus</p>
+    </a>
+	  
+	  
+	  
 
     </ol>
   </div>
 </section>
-<section id="branches" class="page">
 
-  <h2 style="text-align:center;">🏗️ 3rd Semester Syllabus – Branch Wise</h2>
-
-  <!-- INTRO -->
-  <div style="
-    max-width:900px;
-    margin:25px auto;
-    background:#ffffff;
-    padding:25px;
-    border-radius:15px;
-    line-height:1.9;
-    box-shadow:0 6px 16px rgba(0,0,0,0.12);
-    font-size:1.05rem;
-    text-align:center;
-  ">
-    Select your branch below to access the official 3rd semester syllabus
-    PDF. Click on the branch card to open the syllabus.
-  </div>
-
-  <!-- BRANCH GRID -->
-  <div style="
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-top:30px;
-  ">
-
-    <!-- CIVIL -->
-    <div class="photo-box">
-      <div class="pdf-placeholder">CIVIL</div>
-      <div class="photo-quote">
-        <a href="civil.pdf" target="_blank">
-          🏗️ Civil Engineering<br>
-          3rd Semester Syllabus
-        </a>
-      </div>
-    </div>
-
-    <!-- ELECTRICAL -->
-    <div class="photo-box">
-      <div class="pdf-placeholder">ELEC</div>
-      <div class="photo-quote">
-        <a href="electric.pdf" target="_blank">
-          ⚡ Electrical Engineering<br>
-          3rd Semester Syllabus
-        </a>
-      </div>
-    </div>
-
-    <!-- COMPUTER / CSE -->
-    <div class="photo-box">
-      <div class="pdf-placeholder">CSE</div>
-      <div class="photo-quote">
-        <a href="computer.pdf" target="_blank">
-          💻 Computer Engineering<br>
-          3rd Semester Syllabus
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-</section>
 <!-- ===== PORTFOLIO ===== -->
-<section id="portfolio" class="page">
+<section class="page" id="portfolio">
   <h2>My Portfolio</h2>
 
   <!-- Portfolio Options -->
@@ -1435,65 +2323,11 @@ header.home::before{
   <img src="nb.jpeg" alt="Photo">
 </div>
   </div>
-
- 
-  <!-- ACHIEVEMENTS GALLERY -->
-  <div style="display:flex; gap:20px; margin-bottom:20px;">
-    <button onclick="showPortfolioContent('gallery')">achievement</button>
-  </div>
-
-<div class="achievements">
-
-  <div class="photo-box">
-    <a href="National Sports &  physical Fitness Board.pdf" target="_blank">
-      <div class="pdf-placeholder">PDF</div>
-    </a>
-    <div class="photo-quote">
-      Achieved excellence in sports and fitness, demonstrating discipline, dedication, consistency, and strong physical performance.
-    </div>
-  </div>
-
-  <div class="photo-box">
-    <a href="Getting Started with Working Remotely Certificat.pdf" target="_blank">
-      <div class="pdf-placeholder">PDF</div>
-    </a>
-    <div class="photo-quote">
-      Learned essential remote working skills, improving communication, productivity, collaboration, and adaptability in digital workplaces.
-    </div>
-  </div>
-
-  <div class="photo-box">
-    <a href="Time  maagement certificat.pdf" target="_blank">
-      <div class="pdf-placeholder">PDF</div>
-    </a>
-    <div class="photo-quote">
-      Developed effective time management skills, prioritizing tasks efficiently, meeting deadlines, and maintaining consistent productivity.
-    </div>
-  </div>
-
-  <div class="photo-box">
-    <a href="introduction R certificate.pdf" target="_blank">
-      <div class="pdf-placeholder">PDF</div>
-    </a>
-    <div class="photo-quote">
-      Completed introduction to R programming, gaining foundational knowledge in data analysis and statistical computing.
-    </div>
-  </div>
-
-  <div class="photo-box">
-    <a href="mini challeng garbage moving robot certificate.pdf" target="_blank">
-      <div class="pdf-placeholder">PDF</div>
-    </a>
-    <div class="photo-quote">
-      Designed and built a garbage moving robot, showcasing innovation, engineering skills, and problem-solving ability.
-    </div>
-  </div>
-
-</div>
+  
 </div>
 </section>
 
-<section id="notice" class="page">
+<section class="page" id="notice">
 
   <h2 style="text-align:center;">🏫 Hailakandi Polytechnic</h2>
 
@@ -1566,72 +2400,160 @@ header.home::before{
 </footer>
 
 <script>
+// ================= MENU =================
+
 function toggleMenu(){
-  document.getElementById('menu').classList.toggle('show');
+    document.getElementById("menu").classList.toggle("show");
 }
+
+// ================= NAVIGATION =================
 
 function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-  document.getElementById('menu').classList.remove('show');
+
+    // section show
+    document.querySelectorAll(".page").forEach(function(page){
+        page.classList.add("active");
+    });
+
+    // Target section
+    const target=document.getElementById(id);
+
+    if(target){
+
+        target.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    }
+
+    // Close Menu
+    document.getElementById("menu").classList.remove("show");
+
 }
+
+// ================= HOME =================
 
 function scrollIntro(){
-  window.location.href = "https://marufhassan123.github.io/marufhassan-site/";
+
+    showPage("home-extra");
+
 }
 
-let idx=0;
-const lines=document.querySelectorAll('.song-line');
-setInterval(()=>{
-  lines.forEach(l=>l.classList.remove('active'));
-  lines[idx].classList.add('active');
-  idx=(idx+1)%lines.length;
-},3500);
+// ================= PORTFOLIO =================
 
-/* ===== CONTACT TOGGLE FUNCTION ===== */
-function toggleContact(){
-  const info = document.getElementById('contactInfo');
-  if(info.style.display === 'flex'){
-    info.style.display = 'none';
-  }else{
-    info.style.display = 'flex';
-  }
-}
-/* ===== PORTFOLIO FUNCTIONS ===== */
 function showPortfolio(){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById('portfolio').classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-  document.getElementById('menu').classList.remove('show');
+
+    showPage("portfolio");
+
 }
+
+// ================= CONTACT =================
+
+function toggleContact(){
+
+    const info=document.getElementById("contactInfo");
+
+    if(info.style.display==="flex"){
+
+        info.style.display="none";
+
+    }else{
+
+        info.style.display="flex";
+
+    }
+
+}
+
+// ================= PORTFOLIO GALLERY =================
 
 function showPortfolioContent(id){
-  document.getElementById('gallery').style.display = 'none';
-  document.getElementById('achievements').style.display = 'none';
-  document.getElementById(id).style.display = 'grid';
+
+    const gallery=document.getElementById("gallery");
+    const achievements=document.getElementById("achievements");
+
+    if(gallery) gallery.style.display="none";
+    if(achievements) achievements.style.display="none";
+
+    const section=document.getElementById(id);
+
+    if(section){
+
+        section.style.display="grid";
+
+    }
+
 }
+
+// ================= SHOWCASE =================
 
 function toggleShowcase(id){
-  document.getElementById('collegePhotos').style.display = 'none';
-  document.getElementById('friendPhotos').style.display = 'none';
-  document.getElementById(id).style.display = 'grid';
-}
-</script>
 
-<script>
-function searchPDF() {
-  let input = document.getElementById("pdfSearch").value.toLowerCase();
-  let boxes = document.querySelectorAll("#pdfList .pdf-box");
+    const college=document.getElementById("collegePhotos");
+    const friends=document.getElementById("friendPhotos");
 
-  boxes.forEach(box => {
-    let text = box.innerText.toLowerCase();
-    if (text.includes(input)) {
-      box.style.display = "block";
-    } else {
-      box.style.display = "none";
+    if(college) college.style.display="none";
+    if(friends) friends.style.display="none";
+
+    const target=document.getElementById(id);
+
+    if(target){
+
+        target.style.display="grid";
+
     }
-  });
+
+}
+
+// ================= PDF SEARCH =================
+
+function searchPDF(){
+
+    let input=document.getElementById("pdfSearch").value.toLowerCase();
+
+    let boxes=document.querySelectorAll("#pdfList .pdf-box");
+
+    boxes.forEach(function(box){
+
+        let text=box.innerText.toLowerCase();
+
+        if(text.indexOf(input)>-1){
+
+            box.style.display="block";
+
+        }else{
+
+            box.style.display="none";
+
+        }
+
+    });
+
+}
+
+// ================= SONG =================
+
+const lines=document.querySelectorAll(".song-line");
+
+if(lines.length>0){
+
+let idx=0;
+
+setInterval(function(){
+
+lines.forEach(function(line){
+
+line.classList.remove("active");
+
+});
+
+lines[idx].classList.add("active");
+
+idx=(idx+1)%lines.length;
+
+},3500);
+
 }
 </script>
 </body>
